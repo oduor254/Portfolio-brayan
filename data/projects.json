@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Real-Time Sales & Customer Analytics Dashboard",
+    "description": "Interactive dashboard combining Python, HTML, APIs, and Google Sheets to visualize customer behavior, product performance, regional trends, and real-time sales metrics. Processes 10,000+ customer records with live data refresh.",
+    "image": "/projects/sales-dashboard.png",
+    "technologies": ["Python", "Plotly", "Google Sheets API", "HTML/CSS", "JavaScript", "Pandas", "Vercel"],
+    "impact": "Reduced reporting time by 70% and enabled daily decision-making for 3 business units.",
+    "liveDemo": "#",
+    "github": "#",
+    "category": "Dashboard"
+  },
+  {
+    "id": 2,
+    "title": "Customer Segmentation & Behavior Analysis",
+    "description": "Data pipeline that segments customers by purchase behavior, demographics, and regional patterns. Built with Python and integrated directly into Google Sheets for non-technical stakeholders.",
+    "image": "/projects/customer-analytics.png",
+    "technologies": ["Python", "Pandas", "NumPy", "Google Sheets API", "Matplotlib", "Plotly"],
+    "impact": "Identified 4 key customer segments, improving targeted marketing ROI by 35%.",
+    "liveDemo": "#",
+    "github": "#",
+    "category": "Analytics"
+  },
+  {
+    "id": 3,
+    "title": "Inventory & Stock Management Dashboard",
+    "description": "Real-time inventory tracking system built on Odoo data, providing live stock levels, reorder alerts, and supplier performance metrics through an interactive web dashboard.",
+    "image": "/projects/inventory-dashboard.png",
+    "technologies": ["Odoo", "Python", "SQL", "HTML/CSS", "JavaScript", "Vercel"],
+    "impact": "Eliminated stockouts by 60% and reduced excess inventory holding costs.",
+    "liveDemo": "#",
+    "github": "#",
+    "category": "Dashboard"
+  },
+  {
+    "id": 4,
+    "title": "Regional Sales Performance Tracker",
+    "description": "Multi-region sales performance dashboard with drill-down capabilities. Maps sales by region, tracks KPIs against targets, and generates automated weekly performance reports.",
+    "image": "/projects/regional-sales.png",
+    "technologies": ["Python", "Plotly", "Pandas", "Google Sheets API", "JavaScript", "Tailwind CSS"],
+    "impact": "Enabled regional managers to identify underperformance 2 weeks earlier on average.",
+    "liveDemo": "#",
+    "github": "#",
+    "category": "Analytics"
+  },
+  {
+    "id": 5,
+    "title": "Loyalty Program Analytics Platform",
+    "description": "End-to-end loyalty program dashboard tracking member enrollment, point redemption, tier progression, and churn prediction. Integrates with POS data for real-time updates.",
+    "image": "/projects/loyalty-dashboard.png",
+    "technologies": ["Python", "SQL", "Plotly", "Google Sheets API", "Pandas", "HTML/CSS"],
+    "impact": "Increased loyalty program engagement by 28% through data-driven reward optimization.",
+    "liveDemo": "#",
+    "github": "#",
+    "category": "Analytics"
+  },
+  {
+    "id": 6,
+    "title": "Gender-Based Product Performance Analysis",
+    "description": "Comprehensive analysis of product performance segmented by customer gender, purchase frequency, and basket size. Produces automated reports with actionable merchandising recommendations.",
+    "image": "/projects/gender-analysis.png",
+    "technologies": ["Python", "Pandas", "Matplotlib", "Plotly", "Google Sheets API", "Excel"],
+    "impact": "Informed product category decisions that increased average basket value by 18%.",
+    "liveDemo": "#",
+    "github": "#",
+    "category": "Analytics"
+  }
+]

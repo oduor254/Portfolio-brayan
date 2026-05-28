@@ -47,61 +47,65 @@ function Sparkline({ color }: { color: string }) {
 
 const dashboards = [
   {
-    icon: <FiActivity size={22} />,
-    title: 'Sales Analytics',
-    desc: 'Real-time revenue tracking, trend analysis, and sales team performance across all channels.',
+    icon: <FiUsers size={22} />,
+    title: 'RFM Customer Analytics',
+    desc: 'Segments customers by Recency, Frequency and Monetary value to identify high-value tiers and power targeted retention strategies.',
     accent: '#00d4ff',
     iconBg: 'rgba(0,212,255,0.1)',
     metrics: [
-      { label: 'Revenue', value: 2.4, suffix: 'M' },
-      { label: 'Orders', value: 1840, suffix: '' },
+      { label: 'Segments', value: 5, suffix: '' },
+      { label: 'Coverage', value: 100, suffix: '%' },
     ],
-    chips: ['Revenue KPIs', 'Daily Trends', 'Channel Mix'],
-    link: '#',
+    chips: ['RFM Scoring', 'Value Tiers', 'Targeting'],
+    link: 'https://rfm-analytics.vercel.app/',
+    live: true,
   },
   {
-    icon: <FiUsers size={22} />,
-    title: 'Customer Insights',
-    desc: 'Customer segmentation, behavior patterns, retention analysis, and lifetime value tracking.',
+    icon: <FiActivity size={22} />,
+    title: 'Customer Retention',
+    desc: 'Tracks churn risk, cohort retention rates, and intervention triggers to help teams act before customers leave.',
     accent: '#7c3aed',
     iconBg: 'rgba(124,58,237,0.1)',
     metrics: [
-      { label: 'Segments', value: 4, suffix: '' },
       { label: 'Retention', value: 87, suffix: '%' },
+      { label: 'At-Risk', value: 142, suffix: '' },
     ],
-    chips: ['Segments', 'Churn Risk', 'LTV'],
-    link: '#',
+    chips: ['Churn Risk', 'Cohorts', 'Interventions'],
+    link: 'https://customer-retention-dashboard-eosin.vercel.app/',
+    live: true,
+  },
+  {
+    icon: <FiMap size={22} />,
+    title: 'Customer Journey Analytics',
+    desc: 'Full-funnel journey visualization mapping touchpoints from acquisition through conversion and loyalty.',
+    accent: '#10b981',
+    iconBg: 'rgba(16,185,129,0.1)',
+    metrics: [
+      { label: 'Touchpoints', value: 8, suffix: '' },
+      { label: 'Conversion', value: 68, suffix: '%' },
+    ],
+    chips: ['Funnel', 'Drop-offs', 'Channels'],
+    link: 'https://customer-journey-analytics-pi.vercel.app/',
+    live: true,
   },
   {
     icon: <FiBox size={22} />,
     title: 'Inventory Tracking',
     desc: 'Stock levels, reorder alerts, supplier performance, and inventory turnover from Odoo data.',
-    accent: '#10b981',
-    iconBg: 'rgba(16,185,129,0.1)',
+    accent: '#f59e0b',
+    iconBg: 'rgba(245,158,11,0.1)',
     metrics: [
       { label: 'SKUs', value: 430, suffix: '' },
       { label: 'Turnover', value: 94, suffix: '%' },
     ],
     chips: ['Stock Levels', 'Reorder Alerts', 'Turnover'],
     link: '#',
-  },
-  {
-    icon: <FiMap size={22} />,
-    title: 'Regional Performance',
-    desc: 'Multi-region sales performance with drill-down by territory, branch, and sales rep.',
-    accent: '#f59e0b',
-    iconBg: 'rgba(245,158,11,0.1)',
-    metrics: [
-      { label: 'Regions', value: 8, suffix: '' },
-      { label: 'Target Hit', value: 76, suffix: '%' },
-    ],
-    chips: ['Region KPIs', 'Branch Rank', 'Targets'],
-    link: '#',
+    live: false,
   },
   {
     icon: <FiAward size={22} />,
     title: 'Loyalty Program',
-    desc: 'Member enrollment, point redemption rates, tier progression, and reward effectiveness.',
+    desc: 'Member enrollment, point redemption rates, tier progression, and reward effectiveness analytics.',
     accent: '#ec4899',
     iconBg: 'rgba(236,72,153,0.1)',
     metrics: [
@@ -110,6 +114,7 @@ const dashboards = [
     ],
     chips: ['Enrollment', 'Redemptions', 'Tier Mix'],
     link: '#',
+    live: false,
   },
   {
     icon: <FiCpu size={22} />,
@@ -123,6 +128,7 @@ const dashboards = [
     ],
     chips: ['OKRs', 'Variance', 'Alerts'],
     link: '#',
+    live: false,
   },
 ]
 
@@ -182,12 +188,20 @@ function DashCard({ d, i }: { d: typeof dashboards[0]; i: number }) {
             style={{ background: d.iconBg, color: d.accent }}>
             {d.icon}
           </div>
-          <span className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full font-medium"
-            style={{ background: 'rgba(16,185,129,0.08)', color: '#34d399',
-              border: '1px solid rgba(16,185,129,0.2)' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Live
-          </span>
+          {d.live ? (
+            <span className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full font-medium"
+              style={{ background: 'rgba(16,185,129,0.08)', color: '#34d399',
+                border: '1px solid rgba(16,185,129,0.2)' }}>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Live
+            </span>
+          ) : (
+            <span className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full font-medium"
+              style={{ background: 'rgba(100,100,100,0.08)', color: '#6b7280',
+                border: '1px solid rgba(100,100,100,0.2)' }}>
+              Coming Soon
+            </span>
+          )}
         </div>
 
         {/* Title & desc */}
@@ -225,11 +239,17 @@ function DashCard({ d, i }: { d: typeof dashboards[0]; i: number }) {
         <Sparkline color={d.accent} />
 
         {/* Link */}
-        <a href={d.link}
-          className="flex items-center gap-1.5 text-xs font-medium mt-3 transition-colors"
-          style={{ color: d.accent }}>
-          <FiExternalLink size={12} /> Open Dashboard
-        </a>
+        {d.live ? (
+          <a href={d.link} target="_blank" rel="noreferrer"
+            className="flex items-center gap-1.5 text-xs font-medium mt-3 transition-colors hover:underline"
+            style={{ color: d.accent }}>
+            <FiExternalLink size={12} /> Open Dashboard
+          </a>
+        ) : (
+          <span className="flex items-center gap-1.5 text-xs font-medium mt-3 text-slate-600 cursor-not-allowed">
+            <FiExternalLink size={12} /> Coming Soon
+          </span>
+        )}
       </motion.div>
     </motion.div>
   )

@@ -43,9 +43,9 @@ export default function Navbar() {
           className="text-xl font-bold text-white flex items-center gap-2"
           whileHover={{ scale: 1.02 }}
         >
-          <span className="text-cyan-400 font-mono text-2xl">&lt;</span>
-          <span>Brayan</span>
-          <span className="text-cyan-400 font-mono text-2xl">/&gt;</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">
+            The Analyst
+          </span>
         </motion.a>
 
         {/* Desktop nav */}

@@ -11,7 +11,7 @@ const roles = [
     bg: 'bg-cyan-500/5',
     dot: 'bg-cyan-400',
     points: [
-      'Analyze customer behavior patterns across 10,000+ records',
+      'Analyze customer behavior patterns across 300,000+ records',
       'Build gender-based product performance reports',
       'Segment customers by purchase frequency and basket size',
       'Track loyalty program engagement and churn risk',

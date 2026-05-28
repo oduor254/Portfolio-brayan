@@ -34,8 +34,8 @@ const links = [
   {
     icon: <FiMessageSquare size={20} />,
     label: 'WhatsApp',
-    value: 'Available on request',
-    href: '#',
+    value: '+254 706 080 322',
+    href: 'https://wa.me/254706080322',
     color: 'text-emerald-400',
     bg: 'bg-emerald-500/10',
     border: 'border-emerald-500/20',

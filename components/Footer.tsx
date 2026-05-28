@@ -13,7 +13,7 @@ const navLinks = [
 
 const socials = [
   { icon: <FiGithub size={18} />, href: 'https://github.com/', label: 'GitHub' },
-  { icon: <FiLinkedin size={18} />, href: 'https://linkedin.com/in/', label: 'LinkedIn' },
+  { icon: <FiLinkedin size={18} />, href: 'https://www.linkedin.com/in/brayan-omondi-b5ab05227/', label: 'LinkedIn' },
   { icon: <FiMail size={18} />, href: 'mailto:oduoromondi6@gmail.com', label: 'Email' },
 ]
 

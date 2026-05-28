@@ -16,8 +16,8 @@ const links = [
   {
     icon: <FiLinkedin size={20} />,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/brayan-oduor',
-    href: 'https://linkedin.com/in/',
+    value: 'linkedin.com/in/brayan-omondi',
+    href: 'https://www.linkedin.com/in/brayan-omondi-b5ab05227/',
     color: 'text-blue-400',
     bg: 'bg-blue-500/10',
     border: 'border-blue-500/20',

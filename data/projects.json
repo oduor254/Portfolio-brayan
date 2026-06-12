@@ -64,5 +64,16 @@
     "liveDemo": "#",
     "github": "#",
     "category": "Analytics"
+  },
+  {
+    "id": 7,
+    "title": "New Products Dashboard",
+    "description": "Real-time analytics dashboard tracking new product launches, performance metrics, and market adoption. Monitors sales velocity, customer reception, and ROI for new SKUs across categories.",
+    "image": "/projects/new-products.png",
+    "technologies": ["Python", "Plotly", "Pandas", "JavaScript", "HTML/CSS", "Vercel"],
+    "impact": "Accelerated new product go/no-go decisions with live performance tracking and early adoption signals.",
+    "liveDemo": "https://newproducts.vercel.app/",
+    "github": "#",
+    "category": "Dashboard"
   }
 ]
